@@ -1,0 +1,470 @@
+a{
+    text-decoration: none;
+color:white;
+
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/*==================================================*/
+.store {
+    position: relative;
+     overflow: hidden; 
+     height: 45vh;/* Ensures the content does not overflow */
+}
+
+.store::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 80%;
+    z-index: -1; /* Ensures the video is behind all content */
+    background: url("images/intexvc3.mp4") no-repeat center center;
+    background-size: cover;
+}
+
+.store video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index:-1; /* Ensures the video is behind the content */
+}
+
+/*======================================================*/
+
+/*navigation bar*/
+.store{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 0px;
+  
+    
+  
+}
+.store img{
+  height: 50%;
+  width:40%;
+  object-fit:contain;
+object-position:left;
+filter: invert(1);
+filter: brightness(800%);
+margin-top: 60px;
+
+}
+
+#drop-down option{ padding: 5px;
+  
+}
+.page-title{
+    
+    text-align: center;
+    color:black;
+    font-variant: small-caps;
+    padding: 50px;
+    font-size: 100px;
+    font-family: fantasy;
+    letter-spacing: 20px;
+
+}
+#sticky{
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+.menu{
+    background:indigo;
+    text-align: center;
+    
+
+}
+.menu-ul{
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+}
+.menu-ul li{
+    font-size:18px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 25px 70px 26px 70px;
+    background-attachment: fixed;
+    font-weight: 30px;
+}
+.a-menu{
+    text-decoration: none;
+    color: white;
+}
+.menu-ul li:hover{
+    background-color:#FFD700;
+    transform:scale(1.1);
+    color:black;
+    transition: all ease 0.3s;
+    
+}
+/*.dropdown-content {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color:teal;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:inline-block;
+}
+
+.dropdown-content a:hover {
+    background-color:gold ;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+button{
+    padding: 10px 20px; 
+    background-color:transparent; 
+    color:white;
+    border: none; 
+    cursor: pointer; 
+    border-radius: 10px;
+    margin-left: -5px;
+}
+input[type=text] {
+    padding: 10px; 
+    width: 250px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; }
+
+   /* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-box input {
+        width: 80%;
+    }
+
+    .search-box button {
+        width: 20%;
+    }
+}
+    
+/*=========Nav Bar end=====*/
+/*=======================nav bar end ============================*/
+/*=================categories header start=========*/
+.hcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.vhead {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.vhead img {
+    width: 100%;
+    height:100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+/*========================products start================*/
+.sub-heading{
+    display: grid;
+    grid: template columns 1fr;
+
+}
+.sh{
+    background-color:moccasin;
+    border-bottom: 2px solid darkslategray;
+    border-radius: 8px;
+    padding: 15px;
+    text-align:left;
+    font-size:30px;
+    font-weight: 80px;
+    color: mediumvioletred;
+    font-weight: bolder;
+
+
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.item img {
+    width: 125px;
+    height: 160px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discount {
+    color: #d9534f;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color:green;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-to-cart:hover {
+    background-color: #ffcc00;
+}
+.container1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    gap: 20px;
+    border: 2px solid green;
+
+}
+.item1{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.item1 img{
+    width: 125px;
+    height: 160px;
+    
+    margin-bottom: 15px;
+    padding-right:80px;
+
+}
+.add-to-cart1{
+    background-color: #00C853;
+    color: white;
+    border: none;
+    padding: 10px 20px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: auto;
+    align-self:center;
+   
+
+}
+
+.add-to-cart:hover {
+    background-color: #ffcc00;
+}
+.containerf{ 
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.itemf img{
+    width:100%;
+    height:100%;
+
+}
+.details i{
+    
+}
+/*================================footer==================================*/
+footer {
+    background-color:indigo;
+    color:white;
+    padding: 50px 0;
+    text-align: left;
+   
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin: 0;
+    
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section form {
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color:white;
+    text-decoration: none;
+
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.footer-section form button {
+    padding: 10px;
+    background-color: #ff7e00;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    background-color:rgba(0, 0, 0, 0.227);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom ul li {
+    margin: 0 10px;
+}
+
+.footer-bottom ul li a {
+    color:white;
+    text-decoration: none;
+}
+
+
+
+.footer-section .social-icons {
+    margin-top: 20px;
+}
+
+.footer-section .social-icons a {
+    margin-right: 10px;
+    color:gold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-section .social-icons a:hover {
+    color: #ff7e00;
+}
+.F1{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+
+}
+.footer-section img{
+    
+    
+    filter: invert(1);
+    filter: brightness(800%);
+   
+  
+  }
+  
+/*========================================================================*/
