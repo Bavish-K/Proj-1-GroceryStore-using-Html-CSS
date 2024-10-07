@@ -174,6 +174,7 @@ input[type=text] {
    /* Responsive design for mobile */
 @media screen and (max-width: 768px) {
     .navbar {
+         position: static;
         flex-direction: column;
         align-items: flex-start;
     }
